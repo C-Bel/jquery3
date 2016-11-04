@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <title>Construir une page html avec un bouton et un champ texte. le but est de trouver un nombre entre 0 et 100. A chaque réponse la page répond: plus, moins, correcte quand la réponse est trouvée, on obtiens le nombre d'essai que l'on a fait.</title>
+  </head>
+  <body>
+  <input type="texte" id="non"></input>
+  <input type="button" value="loh" id="coups"></input>
+  <span id="mah">c'est plus</span>
+
+  <script type="text/javascript">
+
+  var random = Math.floor(Math.random() * 100);
+
+  var essaie = 1;
+  $('#coups').click(function(){
+
+      var test = $( "#non" ).val();
+      if( test > random ){
+          essaie++;
+          $('#mah').text("C'est moins !");
+      }
+      else if( test < random){
+          essaie++;
+          $('#mah').text("C'est plus!");
+      }
+
+      else {
+          $('#mah').text("c'est gagné tu à mis " + essaie + " coups");
+      }
+  });
+
+
+  </script>
+  </body>
+</html>

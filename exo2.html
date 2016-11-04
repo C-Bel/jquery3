@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <title>Construir une page html avec un bouton +, un bouton - et un champ texte dans lequel on augmente ou baisse le chiffre en fonction des boutons cliqués</title>
+  </head>
+  <body>
+    <input type="button" name="name" value="moins" id="moins"></input>
+    <input type="button" name="name" value="plus" id="plus"></input>
+    <span id="pl-ms">50</span>
+<script type="text/javascript">
+var y = 50;
+
+  $('#moins').click(function(){
+      y--;
+      $('#pl-ms').text(y);
+  });
+  $('#plus').click(function(){
+      y++;
+      $('#pl-ms').text(y);
+  });
+
+</script>
+  </body>
+</html>

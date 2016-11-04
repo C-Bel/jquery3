@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <title>Construisez une page html avec un bouton et un champ texte dans lequel on affiche le nombre de clics sur le bouton.</title>
+  </head>
+  <body>
+<input type="button" name="name" value="hola" id="ici"></input>
+
+<span class="compteur">
+  ici
+</span>
+<script type="text/javascript">
+  var x = 0;
+   $('#ici').click(function()
+   { x++; $('.compteur').text(x); })
+</script>
+  </body>
+
+</html>
